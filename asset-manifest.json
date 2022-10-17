@@ -2,8 +2,8 @@
   "files": {
     "main.css": "./static/css/main.c97c5e03.css",
     "main.js": "./static/js/main.b1191e91.js",
-    "index.html": "./index.html",
     "static/media/check.svg": "./static/media/check.fb9c7b0cc30e7db71907ab825b66d0a7.svg",
+    "index.html": "./index.html",
     "main.c97c5e03.css.map": "./static/css/main.c97c5e03.css.map",
     "main.b1191e91.js.map": "./static/js/main.b1191e91.js.map"
   },
