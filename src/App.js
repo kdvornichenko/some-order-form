@@ -60,6 +60,7 @@ function App() {
 
 	useEffect(() => {
 		axios.get('/_tokens.json').then(res => {
+			console.log(res.data)
 			if (distributorsURL) {
 				setToken(res.data.distributors.token)
 				setChatId(res.data.distributors.id)
