@@ -60,10 +60,6 @@ function App() {
 
 	useEffect(() => {
 		axios.get('https://shop.utonhealth.com/_tokens.json').then(res => {
-			if (testURL) {
-				setToken(res.data.test.token)
-				setChatId(res.data.test.id)
-			}
 			if (distributorsURL) {
 				setToken(res.data.distributors.token)
 				setChatId(res.data.distributors.id)
@@ -72,8 +68,10 @@ function App() {
 				setToken(res.data.cosmetologist.token)
 				setChatId(res.data.cosmetologist.id)
 			}
+			setToken(res.data.test.token)
+			setChatId(res.data.test.id)
 		})
-	}, [])
+	}, [cosmetologistURL, distributorsURL])
 
 	const URI_API = `https://api.telegram.org/bot${token}/sendMessage`
 
