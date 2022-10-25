@@ -59,7 +59,7 @@ function App() {
 	const testURL = window.location.toString().includes('test')
 
 	useEffect(() => {
-		axios.get('/some-order-form/_tokens.json').then(res => {
+		axios.get('https://github.com/kdvornichenko/some-order-form/_tokens.json').then(res => {
 			if (distributorsURL) {
 				setToken(res.data.distributors.token)
 				setChatId(res.data.distributors.id)
