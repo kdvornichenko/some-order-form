@@ -59,18 +59,22 @@ function App() {
 	const testURL = window.location.toString().includes('test')
 
 	useEffect(() => {
-		axios.get('https://github.com/kdvornichenko/some-order-form/_tokens.json').then(res => {
-			if (distributorsURL) {
-				setToken(res.data.distributors.token)
-				setChatId(res.data.distributors.id)
-			}
-			if (cosmetologistURL) {
-				setToken(res.data.cosmetologist.token)
-				setChatId(res.data.cosmetologist.id)
-			}
-			setToken(res.data.test.token)
-			setChatId(res.data.test.id)
-		})
+		axios
+			.get(
+				'https://raw.githubusercontent.com/kdvornichenko/some-order-form/master/_tokens.json'
+			)
+			.then(res => {
+				if (distributorsURL) {
+					setToken(res.data.distributors.token)
+					setChatId(res.data.distributors.id)
+				}
+				if (cosmetologistURL) {
+					setToken(res.data.cosmetologist.token)
+					setChatId(res.data.cosmetologist.id)
+				}
+				setToken(res.data.test.token)
+				setChatId(res.data.test.id)
+			})
 	}, [cosmetologistURL, distributorsURL])
 
 	const URI_API = `https://api.telegram.org/bot${token}/sendMessage`
