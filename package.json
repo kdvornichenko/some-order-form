@@ -1,5 +1,6 @@
 {
 	"name": "uton-distributors-shop",
+	"proxy":"https://shop.utonhealth.com",
 	"version": "0.1.0",
 	"private": true,
 	"homepage": ".",

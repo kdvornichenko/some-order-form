@@ -59,7 +59,7 @@ function App() {
 	const testURL = window.location.toString().includes('test')
 
 	useEffect(() => {
-		axios.get('https://shop.utonhealth.com/_tokens.json').then(res => {
+		axios.get('/_tokens.json').then(res => {
 			if (distributorsURL) {
 				setToken(res.data.distributors.token)
 				setChatId(res.data.distributors.id)
